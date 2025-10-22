@@ -25,12 +25,3 @@ def get_logger(name: str, level=logging.INFO):
         logger.addHandler(handler)
     logger.setLevel(level)
     return logger
-
-# Usage
-logger = get_logger(__name__)
-logger.info("Structured info message")
-logger.warning("Structured warning message")
-try:
-    raise ValueError("Sample exception")
-except Exception:
-    logger.error("Error occurred", exc_info=True)
